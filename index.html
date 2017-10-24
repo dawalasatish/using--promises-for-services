@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style type="text/css" media="screen">
+		.m-t-30{
+			margin-top: 50px;
+		}
+		tbody tr:last-child {
+    background-color: #000000;
+    color: #fff;
+}
+	</style>
+</head>
+<body>
+	<div class="container m-t-30">
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="container m-t-30">
+                                                                                      
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Role ID</th>
+        <th>Role Description</th>
+        <th>Active</th>
+        <th>Role Title</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in roles">
+        <td>{{$index+1}}</td>
+        <td>{{x._id}}</td>
+        <td>{{x.description | uppercase}}</td>
+        <td>{{x.isActive}}</td>
+        <td>{{x.title | uppercase}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="container m-t-30">
+	Data is getting from services: {{data}}
+	</div>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="factory.js"></script>
+	<script type="text/javascript" src="service.js"></script>
+</body>
+</html>
